@@ -5,12 +5,12 @@
 %\setlength{\textheight}{8in}
 
 %Loads the article class as the base template for further changes
-\LoadClass{article}
+\LoadClass[a4paper]{article}
 
 %Following are all the packages required for this class file
 \RequirePackage{titlesec}
-\RequirePackage{charter}
-\RequirePackage[hmargin=.5in, vmargin=.5in]{geometry}
+%\RequirePackage{palatino}
+\RequirePackage[a4paper, top=0.5in, bottom=1in, left=0.5in, right=0.5in]{geometry}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{graphicx}
@@ -47,7 +47,7 @@
   \end{minipage}
   \begin{minipage}[.3\textwidth]{0.4\textwidth}
     \raggedleft
-    \includegraphics[width=.3\textwidth]{logo.ps} %Insti logo
+    \includegraphics[width=.3\textwidth]{logo.png} %Insti logo
   \end{minipage}
   \\[.5em] 
   \begin{minipage}{.33\textwidth}
@@ -83,15 +83,15 @@
 
 %Set paragraph indent and lengths of previously defined variables
 \setlength{\parindent}{0em}
-\settowidth{\EduTableOne}{B.Tech in Electrical Engineering}
-\settowidth{\EduTableTwo}{\textbf{Indian Institute of Technology Madras }}
+\settowidth{\EduTableOne}{\textbf{B.Tech in Electrical Engineering}}
+\settowidth{\EduTableTwo}{\textbf{Indian Institute of Technology Madras}}
 \settowidth{\EduTableThree}{\textbf{\%/CGPA}}
-\settowidth{\EduTableFour}{\textbf{completion}}
+\settowidth{\EduTableFour}{\textbf{Year of Completion}}
 
 %Reformat section, subsection and subsubsection as needed
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titleformat{\subsection}{\large\scshape\raggedright}{$\bullet$}{.5em}{}
-\titleformat{\subsubsection}[runin]{\bf\large\raggedright}{$\bullet$}{.5em}{}
+\titleformat{\subsection}{\bf\raggedright}{}{.5em}{}
+\titleformat{\subsubsection}[runin]{}{$\bullet$}{.5em}{}
 
 %Change the spacing options for section, subsection and subsubsection
 %The first parameter specifies the gap from the margin in the default case
@@ -109,7 +109,7 @@
 %\EduDetails must be used in order to enter stuff in here
 \newenvironment{EducationTable}{%
   \begin{center}%
-    \begin{tabular*}{\textwidth}{p{.25\textwidth} c c c}%
+    \begin{tabular*}{\textwidth}{p{.27\textwidth} c c c}%
       {\bf Program} & {\bf Institution} & {\bf \%/CGPA} & {\bf Year of completion} \\[.75em] %
 }
 {\end{tabular*}%
@@ -160,11 +160,17 @@
   \raggedright
   \hangindent=3.45em\hangafter=1\noindent%
   \ifTwoColumn
-    \parbox[t]{.4\textwidth}{#1}
+    %\parbox[t]{.4\textwidth}{#1}
+    #1
   \else#1%
   \fi
   \par%
 }
+
+\newcommand{\datedpoint}[2]{
+  \Point{#1 \hfill #2}
+}
+
 %\newcommand{\Point}[1]{%
 %  %\subsubsection{}
 %  \ifCourse
