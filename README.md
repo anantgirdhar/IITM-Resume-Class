@@ -37,9 +37,9 @@ line. Also, data has to be filled in using
 environment, you use the \Point command as described previously to enter any
 data that you need. You do not need to worry about the indentation or the
 formatting or anything of that sort. The code should take care of it for you.
-* Finally, to compile, use ``$ latex <yourfile>.tex`` (where <yourfile> is the
-name of your .tex file) from the command line. You should already have the
-latex command if you have LyX installed.
+* Finally, to compile, use ``$ pdflatex <yourfile>.tex`` (where <yourfile> is 
+the name of your .tex file) from the command line. You should already have the
+pdflatex command if you have LyX installed.
 
 If you run into any bugs/problems, either let us know through mail, or open
 an issue in github.
