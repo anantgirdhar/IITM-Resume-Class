@@ -1,3 +1,5 @@
+% vim: set filetype=tex :
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{mycv}[2011/09/18 Insti Standard Template CV]
 %\renewcommand{\normalsize}{\fontsize{10pt}{12pt}\selectfont}
